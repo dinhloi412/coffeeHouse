@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .modal {
+        padding: 2rem;
+        border: 1px solid #eee;
+        width: max-content;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+    }
+
+    .button-close-modal {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-left: auto;
+    }
+</style>
+
+<body>
+    <main>
+        <div class="modal">
+            <button class="button-close-modal">X</button>
+
+            <h2>Subscribe to my Newsletter</h2>
+
+            <p>Get access to exclusive content that only share with my email list</p>
+
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" />
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener(
+            "click",
+            function (event) {
+                // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+                if (
+                    event.target.matches(".button-close-modal") ||
+                    !event.target.closest(".modal")
+                ) {
+                    closeModal()
+                }
+            },
+            false
+        )
+
+        function closeModal() {
+            document.querySelector(".modal").style.display = "none"
+        }
+    </script>
+    <script src="./js/new.js"></script>
+</body>
+
+</html>

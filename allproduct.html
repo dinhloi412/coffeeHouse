@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Letdiv</title>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/query.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600;700&family=Recursive:wght@400;500;600;700;800&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="top-menu">
+
+            <!-- <div class="mobile-nav-box"></div> -->
+            <a href="/" class="logo-box">
+                <img src="./images/website/logo.png" alt="pictures">
+            </a>
+            <ul class="button-menu">
+                <li><a href="#">Đặt hàng</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Cửa hàng</a></li>
+                <li><a href="#">Khuyến mãi</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+            </ul>
+            <ul class="button-box">
+                <li class="search-bar">
+                    <button>
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                </li>
+                <li class="account">
+                    <button>
+                        <ion-icon name="people-outline"></ion-icon>
+                    </button>
+                    <div class="list-account">
+                        <a href="#" class="show-login"><span class="text-login">Đăng nhập</span></a>
+                        <a href="#"><span>Đăng ký</span></a>
+                    </div>
+                </li>
+                <li class="cart" id="item-cart">
+                    <span class="cart-quantity"></span>
+                    <button>
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+                    <div class="cart-modal" id="cart-modal">
+                        <div class="empty-cart">
+                            <span class="text-cart">Your Cart is Empty</span>
+                        </div>
+                        <!-- <div class="cart-item">
+                            <div class="cart-item__img">
+                                <img src="./images/coffee/cafesuanong.jpg" alt="hinhanh">
+                            </div>
+                            <div class="detail-product__cart">
+                                <strong>Cafe phe sua</strong>
+                                <p>25.000đ<span class="cart-item_quantity"> x2</span></p>
+                            </div>
+                            <button class="cart-item__remove">X</button>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item__img">
+                                <img src="./images/coffee/cafesuanong.jpg" alt="hinhanh">
+                            </div>
+                            <div class="detail-product__cart">
+                                <strong>Cafe phe sua</strong>
+                                <p>25.000đ<span> x2</span></p>
+                            </div>
+
+                        </div> -->
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="notify hidden">
+            <span class="message"></span>
+        </div>
+
+    </header>
+    <div class="footer-menu">
+        <div class="bottom-menu">
+            <div class="bottom-menu__item icon-home">
+                <button>
+                    <ion-icon name="home-outline"></ion-icon>
+                </button>
+                <span>Trang chủ</span>
+            </div>
+            <div class="bottom-menu__item">
+                <button>
+                    <ion-icon name="cafe-outline"></ion-icon>
+                </button>
+                <span>Đặt hàng</span>
+            </div>
+            <div class="bottom-menu__item">
+                <button>
+                    <ion-icon name="newspaper-outline"></ion-icon>
+                </button>
+                <span>Tin tức</span>
+            </div>
+            <div class="bottom-menu__item">
+                <button>
+                    <ion-icon name="storefront-outline"></ion-icon>
+                </button>
+                <span>Cửa hàng</span>
+            </div>
+
+
+        </div>
+    </div>
+    <section class="speciality mt-10" id="speciality">
+        <h1 class="heading-h1">Sản phẩm từ nhà<span> </span></h1>
+        <div class="box-container">
+            <ul>
+                <li>
+                    <ion-icon name="beer-outline"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon name="fast-food-outline"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon name="pizza-outline"></ion-icon>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <section class="products mt-1">
+        <div class="list-product" id="list-product">
+            <!-- <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div> -->
+            <!-- <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product ">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="item-product">
+            <div class="image">
+                <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+            </div>
+            <div class="heading-product">
+                <h4>Cà phê sữa đá</h4>
+            </div>
+            <div class="detail-product">
+                <p class="price-product">29.000đ</p>
+                <button class="btn-addtocart">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div> -->
+        </div>
+        <div class="see-detail__products">
+            <!-- <span>Xem tất cả</span> -->
+        </div>
+    </section>
+    <div class="popup-login">
+        <div class="close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+        <div class="form">
+            <h2>Login</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Remember</label>
+            </div>
+            <div class="form-element">
+                <button class="button-login" type="submit">Sign in</button>
+            </div>
+            <div class="form-element">
+                <a href="#">Forgot password</a>
+            </div>
+        </div>
+    </div>
+    <div class="cart-dialog">
+        <div class="header-dialog">
+            <div class="close-btn closeJs">
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+            <div class="heading-dialog">
+                <h5>Thêm món mới</h5>
+            </div>
+        </div>
+        <div class="item-product__dialog">
+            <div class="img-product__dialog">
+                <img src="./images/coffee/cafesuanong.jpg" alt="">
+            </div>
+            <div class="info-product__dialog">
+                <h2 class="name-product__dialog">
+                    Cà phê sữa đá
+                    </h1>
+                    <p>Cà phê Đắk Lắk nguyên chất được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị
+                        đậm
+                        đà, hài hòa giữa vị ngọt đầu lưỡi và vị đắng thanh thoát nơi hậu vị.</p>
+                    <div class="price-quanity__product__dialog">
+                        <span>40.000đ</span>
+                        <div class="buttons_added">
+                            <input class="minus is-form" type="button" value="-">
+                            <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number"
+                                value="1">
+                            <input class="plus is-form" type="button" value="+">
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="select-size">
+            <div class="card-product__option">
+                <span>CHỌN SIZE(BẮT BUỘC)</span>
+            </div>
+            <div class="card-product__option-item">
+                <div class="control-size__option_item">
+                    <input type="radio" name="nho" id="small">
+                    <label for="small">Nhỏ</label>
+                </div>
+                <div class="control-size__option_item">
+                    <input type="radio" name="nho" id="normal">
+                    <label for="normal">Trung bình</label>
+                </div>
+                <div class="control-size__option_item">
+                    <input type="radio" name="nho" id="big">
+                    <label for="big">Lớn</label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer__dialog">
+            <button class="btn-addItem__product">Thêm vào giỏ hàng</button>
+        </div>
+    </div>
+    <footer>
+        <section>
+            <div class="footer-row">
+                <div class="col-3">
+                    <h3 class="footer-head">Products</h3>
+                    <ul class="menu">
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">product help</a></li>
+                        <li><a href="#">warranty</a></li>
+                        <li><a href="#">order status</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h3 class="footer-head">services</h3>
+                    <ul class="menu">
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">product help</a></li>
+                        <li><a href="#">warranty</a></li>
+                        <li><a href="#">order status</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h3 class="footer-head">support</h3>
+                    <ul class="menu">
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">product help</a></li>
+                        <li><a href="#">warranty</a></li>
+                        <li><a href="#">order status</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <div class="contact">
+                        <h3 class="contact-header">
+                            OrderDrink
+                        </h3>
+                        <ul class="contact-socials">
+                            <li><a href="#">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a></li>
+                            <li><a href="#">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a></li>
+                            <li><a href="#">
+                                    <ion-icon name="logo-youtube"></ion-icon>
+                                </a></li>
+                            <li><a href="#">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a></li>
+                        </ul>
+                        <div class="img-download">
+                            <img src="./images/website/Googleplay.png" alt="">
+                            <img src="./images/website/Appstore.png" alt="">
+                        </div>
+                    </div>
+                    <!-- <div class="subscribe">
+                        <input type="email" placeholder="ENTER YOUR EMAIL">
+                        <button>subscribe</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer-cover">
+            </div>
+        </section>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/event.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

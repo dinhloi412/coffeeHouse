@@ -1,0 +1,227 @@
+.modal.appear {
+    display: flex;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+}
+.popup-login {
+    display: flex;
+    gap: 5rem;
+    position: relative;
+    /* top: -150%;
+    left: 50%; */
+    z-index: 1;
+    /* transform: translate(-50%, -50%) scale(1.25); */
+    width: 60rem;
+    /* padding: 2rem 3rem; */
+    background: var(--white);
+    /* box-shadow: 0.2rem 0.2rem 0.4rem 0.4rem rgba(0, 0, 0, 0.15); */
+    border-radius: 1rem;
+    animation: ModalFadeIn ease 0.5s;
+    align-items: center;
+}
+.banner-Login {
+    flex: 1;
+    display: flex;
+}
+.banner-Login img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popup-login .close-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.popup-login .form {
+    flex: 1;
+    align-items: center;
+}
+.popup-login .form h2 {
+    text-align: center;
+    color: var(--black);
+    font-size: 2.4rem;
+}
+.popup-login .form-element {
+    margin: 1.6rem 0;
+    width: 80%;
+}
+.popup-login .form-element label {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--gray);
+}
+.popup-login .form-element a {
+    color: var(--red);
+}
+.popup-login .form-element input[type="text"],
+.popup-login .form-element input[type="password"] {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 45px;
+    line-height: 45px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    outline: none;
+    /* text-align: start; */
+}
+[type="text"]:focus {
+    outline: none;
+    border-color: var(--red);
+}
+.popup-login .form-element input[type="checkbox"] {
+    margin-right: 0.4rem;
+}
+.popup-login .form-element button {
+    width: 100%;
+    height: 4rem;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.btn-login {
+    color: var(--white);
+    background: var(--red);
+}
+.popup-login .form-element a {
+    font-weight: 600;
+    display: block;
+    text-align: right;
+    font-size: 1.4rem;
+}
+.heading-form-Login {
+    display: flex;
+}
+/* dialog addtocart */
+.cart-dialog {
+    display: flex;
+    /* height: 90vh; */
+    position: relative;
+    font-size: 1.2rem;
+    flex-direction: column;
+    z-index: 1;
+    max-width: 41rem;
+    padding: 0 1rem;
+    background: var(--white);
+    box-shadow: 0.2rem 0.2rem 0.4rem 0.4rem rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    animation: ModalFadeIn ease 0.5s;
+}
+.header-dialog {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem;
+}
+.header-dialog .close-btn {
+    flex: 0.5;
+    cursor: pointer;
+}
+.header-dialog ion-icon,
+.header-dialog h5 {
+    font-size: 1.6rem;
+}
+
+.item-product__dialog {
+    display: flex;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+.img-product__dialog {
+    width: 10rem;
+    height: 10rem;
+}
+.img-product__dialog img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 0.4rem;
+    object-fit: cover;
+}
+.price-quanity__product__dialog {
+    display: flex;
+    color: var(--black) !important;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+.info-product__dialog {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--gray);
+}
+.info-product__dialog p {
+    font-weight: 400;
+}
+/* quantity */
+
+/* end quantity */
+.modal-footer__dialog {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+}
+
+@keyframes ModalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-221px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.counter {
+    width: 10rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter input {
+    width: 4rem;
+    border: 0;
+
+    border-radius: 1rem;
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+    text-align: center;
+    background: var(--white);
+    color: var(--black);
+    appearance: none;
+    outline: 0;
+}
+.counter span {
+    display: block;
+    font-size: 2rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: var(--red);
+    user-select: none;
+}

@@ -1,0 +1,134 @@
+/* Spacing 2/ 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 160 */
+/* Font Scale: 12 / 14 / 16 / 18 / 20 / 24 /28 /32 / 36 / 42 / 48 /54 / 60 / 68 / 76 / 84 /92  */
+:root {
+    --red: #ff3838;
+    --white: #ffffff;
+    --black: #333;
+    --gray: #666;
+    --blue: #007bff;
+    --border: #dee2e6;
+    --navi: #f7fbff;
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    color: #333;
+    line-height: 1.5;
+}
+*::selection {
+    background: var(--red);
+    color: #fff;
+}
+html {
+    font-size: 62.5%;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+body {
+    /* background: #f7f7f7; */
+    background: #ffffff;
+    font-size: 1.6rem;
+}
+section {
+    padding: 2rem 9%;
+}
+.container {
+    max-width: 110rem;
+    width: 100%;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+.btn:hover {
+    background: var(--red);
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    border: 0.2rem solid var(--red);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+}
+.hidden {
+    display: none;
+}
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    background: rgba(51, 51, 51, 0.4);
+    border-radius: 2rem;
+}
+.mt-10 {
+    margin-top: 10rem;
+}
+.mt-5 {
+    margin-top: 5rem;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mb-5 {
+    margin-bottom: 5rem;
+}
+.mb-10 {
+    margin-bottom: 10rem;
+}
+.p-1 {
+    padding: 1rem;
+}
+.heading-h1 {
+    justify-content: center;
+    font-size: 3.4rem;
+    padding: 1rem;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+}
+.heading-h1 ion-icon {
+    color: var(--red);
+}
+.small {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 3px;
+    color: #e74c3c;
+}
+.form-control.error {
+    border-bottom-color: #e74c3c;
+}
+.form-control span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: 0.3s;
+}
+
+.form-control input:focus ~ span::before {
+    width: 100%;
+}

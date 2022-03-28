@@ -1,0 +1,210 @@
+.group-checkout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+.page-checkout {
+    margin-top: 10rem;
+}
+.checkout-table {
+    flex: 2;
+
+    border-radius: 0.4rem;
+    border: 1px solid var(--border);
+}
+.checkout-coupon {
+}
+.content-coupon {
+    display: flex;
+}
+.input-group {
+    display: flex;
+    gap: 2rem;
+}
+
+.checkout-heading .heading-h1 {
+    justify-content: flex-start;
+}
+.checkout-payment {
+    display: flex;
+}
+/* .container {
+    width: 1140px;
+    margin: 0 auto;
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.checkout-table table {
+    /* border: 1px solid #dee2e6; */
+    padding: 8px;
+}
+.checkout-table table td {
+    text-align: center;
+    padding: 0.4rem;
+    font-size: 1.6rem;
+}
+.checkout-table table th {
+    /* border: 1px solid #dee2e6; */
+    text-align: center;
+    padding: 0.4rem;
+    font-size: 1.6rem;
+    color: var(--gray);
+}
+.checkout-img {
+    width: 8rem;
+}
+.checkout-img img {
+    width: 100%;
+    border-radius: 0.6rem;
+}
+.checkout-infor-product {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: start;
+}
+.checkout-pay {
+}
+.checkout-pay-content {
+    display: flex;
+    flex-direction: column;
+}
+.checkout-pay-content span {
+    color: var(--red);
+    font-weight: 600;
+    text-align: start;
+}
+.checkout-content h5 {
+    font-size: 1.6rem;
+}
+
+.cart-item-checkout .counter input {
+    width: 4.4rem;
+    background-color: var(--white);
+    color: var(--black);
+    border: 0.1rem solid var(--border);
+    font-size: 1.6rem;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+}
+.select {
+    position: relative;
+    display: flex;
+    width: 9rem;
+    height: 3rem;
+    line-height: 3;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    border: 0.1rem solid var(--border);
+    align-items: center;
+    color: var(--gray);
+    font-weight: 500;
+}
+select {
+    flex: 1;
+    padding: 0 0.5rem;
+    color: var(--gray);
+    cursor: pointer;
+    font-family: 600;
+    border: var(--border);
+}
+/* thiết kế dấu mũi tên */
+.select::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1rem;
+    background: DodgerBlue;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: 0.25s all ease;
+    -o-transition: 0.25s all ease;
+    transition: 0.25s all ease;
+    color: white;
+}
+/* Hiệu ứng hover */
+.select:hover::after {
+    color: Gainsboro;
+}
+
+.signup {
+    padding: 3rem 2rem;
+    background-color: var(--white);
+    text-align: center;
+    border-radius: 0.6rem 0 0 5rem;
+}
+
+[type="text"] {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 45px;
+    line-height: 45px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+[type="text"]:focus {
+    outline: none;
+    border-color: var(--red);
+}
+.signup .btn-new {
+    width: 100%;
+}
+.checkout-infor-customer {
+    text-align: center;
+    color: var(--gray);
+}
+.text-modal-sucess {
+    color: var(--red);
+}
+.sub-heading-modal-success {
+    text-align: center;
+    display: block;
+    color: #4caf50;
+    font-family: 600;
+}
+.heading-modal-success {
+    color: #4caf50 !important;
+}
+.heading-modal-success ion-icon {
+    color: #4caf50;
+}
+@media (max-width: 544px) {
+    html {
+        font-size: 50%;
+    }
+}
+.checkout-AllDelete {
+    grid-row: 2;
+}
+.checkout-AllDelete button {
+    color: var(--red);
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    font-size: 1.6rem;
+}
+.popup-login {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}

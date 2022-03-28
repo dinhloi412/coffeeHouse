@@ -1,0 +1,127 @@
+.item-product__page {
+    padding: 6rem 24%;
+    margin-top: 7rem;
+}
+.items-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+    padding: 0 2rem;
+    padding-bottom: 4rem;
+    border-radius: 1rem;
+}
+.buttons_added {
+    opacity: 1;
+    display: inline-block;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    white-space: nowrap;
+    vertical-align: top;
+}
+.is-form {
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f9f9;
+    height: 3.2rem;
+    width: 2.5rem;
+    padding: 0;
+    text-shadow: 1px 1px 1px #fff;
+    border: 1px solid #ddd;
+}
+.is-form:focus,
+.input-text:focus {
+    outline: none;
+}
+.is-form.minus {
+    border-radius: 4px 0 0 4px;
+}
+.is-form.plus {
+    border-radius: 0 4px 4px 0;
+}
+.input-qty {
+    background-color: #fff;
+    height: 3.2rem;
+    text-align: center;
+    font-size: rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 0;
+    border-right: 0;
+    padding: 0;
+}
+.input-qty::-webkit-outer-spin-button,
+.input-qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.colum-left__product .img--product__detail {
+    width: 10rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.colum-left__product .img--product__main {
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+    border-radius: 1rem;
+}
+.img--product {
+    text-align: center;
+}
+.decription--product {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    text-align: center;
+}
+.heading--detail__product h1 {
+    font-size: 3rem;
+}
+.price-quality__product {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.card-product__option-item {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.6rem;
+}
+.btn-addItem__product {
+    border: none;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+.colum-right__product {
+    font-size: 1.6rem;
+    padding-right: 1rem;
+}
+.select-size {
+    margin-top: 2rem;
+
+    border: 0.1rem solid #ededed;
+}
+.card-product__option {
+    background-color: #ededed;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 1 solid var(--gray);
+}
+.card-product__option-item {
+    margin: 1rem 0;
+    padding: 0 2rem;
+}

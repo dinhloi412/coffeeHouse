@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Letdiv</title>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="./css/query.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600;700&family=Recursive:wght@400;500;600;700;800&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="top-menu">
+
+            <!-- <div class="mobile-nav-box"></div> -->
+            <a href="/" class="logo-box">
+                <img src="./images/website/logo.png" alt="pictures">
+            </a>
+            <ul class="button-menu">
+                <li><a href="#">Đặt hàng</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Cửa hàng</a></li>
+                <li><a href="#">Khuyến mãi</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+            </ul>
+            <ul class="button-box">
+                <li class="search-bar">
+                    <button>
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                </li>
+                <li class="account">
+                    <button>
+                        <ion-icon name="people-outline"></ion-icon>
+                    </button>
+                    <div class="list-account">
+                        <a href="#" class="show-login"><span class="text-login">Đăng nhập</span></a>
+                        <a href="#"><span>Đăng ký</span></a>
+                    </div>
+                </li>
+                <!-- <li class="cart" id="item-cart">
+                    <span class="cart-quantity"></span>
+                    <button>
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </button>
+                    <div class="cart-modal" id="cart-modal">
+                        <div class="empty-cart">
+                            <span class="text-cart">Your Cart is Empty</span>
+                        </div>
+
+                    </div>
+                </li> -->
+            </ul>
+
+        </div>
+
+        <div class="notify hidden">
+            <span class="message"></span>
+        </div>
+
+    </header>
+    <main class="payment">
+
+        <div class="footer-menu">
+            <div class="bottom-menu">
+                <div class="bottom-menu__item icon-home">
+                    <button>
+                        <ion-icon name="home-outline"></ion-icon>
+                    </button>
+                    <span>Trang chủ</span>
+                </div>
+                <div class="bottom-menu__item">
+                    <button>
+                        <ion-icon name="cafe-outline"></ion-icon>
+                    </button>
+                    <span>Đặt hàng</span>
+                </div>
+                <div class="bottom-menu__item">
+                    <button>
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                    </button>
+                    <span>Tin tức</span>
+                </div>
+                <div class="bottom-menu__item">
+                    <button>
+                        <ion-icon name="storefront-outline"></ion-icon>
+                    </button>
+                    <span>Cửa hàng</span>
+                </div>
+
+
+            </div>
+        </div>
+        <header>
+            <div class="top-menu">
+
+                <!-- <div class="mobile-nav-box"></div> -->
+                <a href="/" class="logo-box">
+                    <img src="./images/website/logo.png" alt="pictures">
+                </a>
+                <ul class="button-menu">
+                    <li><a href="#">Đặt hàng</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Cửa hàng</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                </ul>
+                <ul class="button-box">
+                    <li class="search-bar">
+                        <button>
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+                    </li>
+                    <li class="account">
+                        <button>
+                            <ion-icon name="people-outline"></ion-icon>
+                        </button>
+                        <div class="list-account">
+                            <a href="#" class="show-login"><span class="text-login">Đăng nhập</span></a>
+                            <a href="#"><span>Đăng ký</span></a>
+                        </div>
+                    </li>
+                    <li class="cart" id="item-cart">
+                        <span class="cart-quantity"></span>
+                        <button>
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </button>
+                        <div class="cart-modal" id="cart-modal">
+                            <div class="empty-cart">
+                                <span class="text-cart">Your Cart is Empty</span>
+                            </div>
+                            <!-- <div class="cart-item">
+                            <div class="cart-item__img">
+                                <img src="./images/coffee/cafesuanong.jpg" alt="hinhanh">
+                            </div>
+                            <div class="detail-product__cart">
+                                <strong>Cafe phe sua</strong>
+                                <p>25.000đ<span class="cart-item_quantity"> x2</span></p>
+                            </div>
+                            <button class="cart-item__remove">X</button>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item__img">
+                                <img src="./images/coffee/cafesuanong.jpg" alt="hinhanh">
+                            </div>
+                            <div class="detail-product__cart">
+                                <strong>Cafe phe sua</strong>
+                                <p>25.000đ<span> x2</span></p>
+                            </div>
+
+                        </div> -->
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="notify hidden">
+                <span class="message"></span>
+            </div>
+
+        </header>
+        <section class="page-checkout mb-10">
+            <div class="checkout-heading">
+                <h1 class="heading-h1">
+                    <ion-icon name="cart"></ion-icon> Giỏ hàng
+                </h1>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor
+                    in, mattis vitae leo.
+                </p> -->
+            </div>
+
+            <div class="group-checkout mt-5">
+
+                <div class="checkout-table p-1">
+                    <table>
+                        <thead>
+                            <tr>
+
+                                <th>Sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th class="th-prices">Giá</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <!-- <tbody>
+                            <tr>
+                                <td>
+                                    <div class="checkout-infor-product">
+                                        <div class="checkout-img">
+                                            <img src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="checkout-content">
+                                            <h3>Cà phê sữa</h3>
+                                            <span>Size nhỏ</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="counter">
+                                        <span class="down" onClick='decreaseValue(event, this)'>-</span>
+                                        <input id="ipQuantity" type="text" value="1" disabled>
+                                        <span class="up" onClick='increaseValue(event, this)'>+</span>
+                                    </div>
+                                </td>
+                                <td>$57.55</td>
+                                <td>$57.55</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody> -->
+                    </table>
+                </div>
+
+                <div class="checkout-infor-customer">
+                    <h2 class="confirm-cart">Xác nhận đơn hàng</h2>
+                    <div class='signup'>
+
+                        <form>
+                            <div class="form-control error">
+                                <input type='text' id="fullNameForm" placeholder='Tên người nhận:' name="fullNameForm"
+                                    required />
+                                <span></span>
+                                <small></small>
+                            </div>
+                            <div class="form-control">
+                                <input type='text' id="numberPhoneForm" placeholder='Số điện thoại:' required />
+                                <span></span>
+                                <small></small>
+                            </div>
+                            <div class="form-control">
+                                <input type='text' id="addressForm" placeholder='Địa chỉ:' required />
+                                <span></span>
+                                <small></small>
+                            </div>
+                            <div class="form-control">
+                                <input type='text' id="noteForm" placeholder='Chú thích:' />
+                                <span></span>
+                                <small></small>
+                            </div>
+                            <div class="form-control">
+                                <input type='text' id="couponForm" placeholder='Coupon:' class="coupon" /><span></span>
+                                <small></small>
+                            </div>
+
+                            <div class="checkout-pay-content">
+                                <span class="total-price-pay">THÀNH TIỀN: </span>
+
+                            </div>
+                            <input type="submit" value="ĐẶT HÀNG" class="btn-new btn-purchaseJS" />
+
+                        </form>
+                    </div>
+                </div>
+                <div class="checkout-AllDelete">
+                    <button class="text-alldelete-items hidden" onclick="confirmDeleteItem()">Xoá tất cả</button>
+                </div>
+            </div>
+
+        </section>
+        <div class="footer-menu">
+            <div class="bottom-menu">
+                <div class="bottom-menu__item icon-home">
+                    <button>
+                        <ion-icon name="home-outline"></ion-icon>
+                    </button>
+                    <span>Trang chủ</span>
+                </div>
+                <div class="bottom-menu__item">
+                    <button>
+                        <ion-icon name="cafe-outline"></ion-icon>
+                    </button>
+                    <span>Đặt hàng</span>
+                </div>
+                <div class="bottom-menu__item">
+                    <button>
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                    </button>
+                    <span>Tin tức</span>
+                </div>
+                <div class="bottom-menu__item">
+                    <button>
+                        <ion-icon name="storefront-outline"></ion-icon>
+                    </button>
+                    <span>Cửa hàng</span>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="modal modal-loginJS">
+            <div class="popup-login">
+                <div class="close-btn">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+                <div class="form">
+                    <h2>Login</h2>
+                    <div class="form-element">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Enter Email">
+                    </div>
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter Password">
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember</label>
+                    </div>
+                    <div class="form-element">
+                        <button class="button-login" type="submit">Sign in</button>
+                    </div>
+                    <div class="form-element">
+                        <a href="#">Forgot password</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-success">
+            <div class="popup-login popup-successJS">
+                <div class="close-btn close-btn-Sucess">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+                <div class="form">
+                    <h2 class="heading-modal-success">
+                        <ion-icon name="pricetags-outline"></ion-icon> Sucess
+                    </h2>
+                    <span class="sub-heading-modal-success">Mua hàng thành công</span>
+                    <div class="content-modal-success">
+                        <p>Tổng giá trị đơn hàng của bạn là: <span class="text-modal-sucess"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <section>
+            <div class="footer-row">
+                <div class="col-3">
+                    <h3 class="footer-head">Products</h3>
+                    <ul class="menu">
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">product help</a></li>
+                        <li><a href="#">warranty</a></li>
+                        <li><a href="#">order status</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h3 class="footer-head">services</h3>
+                    <ul class="menu">
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">product help</a></li>
+                        <li><a href="#">warranty</a></li>
+                        <li><a href="#">order status</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h3 class="footer-head">support</h3>
+                    <ul class="menu">
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">product help</a></li>
+                        <li><a href="#">warranty</a></li>
+                        <li><a href="#">order status</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <div class="contact">
+                        <div class="contact-imgLogo">
+                            <img src="./images/website/logo.png" alt="">
+                        </div>
+                        <ul class="contact-socials">
+                            <li><a href="#">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a></li>
+                            <li><a href="#">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a></li>
+                            <li><a href="#">
+                                    <ion-icon name="logo-youtube"></ion-icon>
+                                </a></li>
+                            <li><a href="#">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a></li>
+                        </ul>
+                        <div class="img-download">
+                            <img src="./images/website/Googleplay.png" alt="">
+                            <img src="./images/website/Appstore.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="contact-mobile">
+                    <ul class="contact-socials">
+                        <li><a href="#">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a></li>
+                        <li><a href="#">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a></li>
+                        <li><a href="#">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a></li>
+                        <li><a href="#">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a></li>
+                    </ul>
+                    <div class="img-download">
+                        <img src="./images/website/Googleplay.png" alt="">
+                        <img src="./images/website/Appstore.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-cover">
+            </div>
+        </section>
+    </footer>
+
+    <script src="./js/payment.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

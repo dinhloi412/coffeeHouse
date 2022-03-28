@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/query.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600;700&family=Recursive:wght@400;500;600;700&display=swap">
+</head>
+<header>
+    <div class="top-menu">
+
+        <!-- <div class="mobile-nav-box"></div> -->
+        <a href="/" class="logo-box">
+            <img src="./images/website/logo.png" alt="pictures">
+        </a>
+        <ul class="button-menu">
+            <li><a href="#">Đặt hàng</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Cửa hàng</a></li>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+        </ul>
+        <ul class="button-box">
+            <li class="search-bar">
+                <button>
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </li>
+            <li class="account">
+                <button>
+                    <ion-icon name="people-outline"></ion-icon>
+                </button>
+                <div class="list-account">
+                    <a href="#" class="show-login"><span class="text-login">Đăng nhập</span></a>
+                    <a href="#"><span>Đăng ký</span></a>
+                </div>
+            </li>
+            <li class="cart" id="item-cart">
+                <span class="cart-quantity"></span>
+                <button>
+                    <a href="./payment.html">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </a>
+                </button>
+                <div class="cart-modal" id="cart-modal">
+                    <div class="empty-cart">
+                        <span class="text-cart">Your Cart is Empty</span>
+                    </div>
+                    <!-- <div class="cart-item">
+                        <div class="cart-item__img">
+                            <img src="./images/coffee/cafesuanong.jpg" alt="hinhanh">
+                        </div>
+                        <div class="detail-product__cart">
+                            <strong>Cafe phe sua</strong>
+                            <p>25.000đ<span class="cart-item_quantity"> x2</span></p>
+                        </div>
+                        <button class="cart-item__remove">X</button>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item__img">
+                            <img src="./images/coffee/cafesuanong.jpg" alt="hinhanh">
+                        </div>
+                        <div class="detail-product__cart">
+                            <strong>Cafe phe sua</strong>
+                            <p>25.000đ<span> x2</span></p>
+                        </div>
+
+                    </div> -->
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <div class="notify hidden">
+        <span class="message"></span>
+    </div>
+
+</header>
+<div class="footer-menu">
+    <div class="bottom-menu">
+        <div class="bottom-menu__item icon-home">
+            <button>
+                <ion-icon name="home-outline"></ion-icon>
+            </button>
+            <span>Trang chủ</span>
+        </div>
+        <div class="bottom-menu__item">
+            <button>
+                <ion-icon name="cafe-outline"></ion-icon>
+            </button>
+            <span>Đặt hàng</span>
+        </div>
+        <div class="bottom-menu__item">
+            <button>
+                <ion-icon name="newspaper-outline"></ion-icon>
+            </button>
+            <span>Tin tức</span>
+        </div>
+        <div class="bottom-menu__item">
+            <button>
+                <ion-icon name="storefront-outline"></ion-icon>
+            </button>
+            <span>Cửa hàng</span>
+        </div>
+
+
+    </div>
+</div>
+<section class="item-product__page">
+    <!-- <div class="items-product">
+        <div class="colum-left__product">
+            <div class="img--product">
+                <img class="img--product__main" src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="caphesua">
+                <img class="img--product__detail" src="./images/coffee/ca-phe-sua-da_400x400.jpg" alt="caphesua">
+            </div>
+            <div class="decription--product">
+                <p>Cà phê Đắk Lắk nguyên chất được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà,
+                    hài
+                    hòa giữa vị ngọt đầu lưỡi và vị đắng thanh thoát nơi hậu vị.</p>
+            </div>
+        </div>
+        <div class="colum-right__product">
+            <div class="heading--detail__product">
+                <h1>Cà Phê sữa đá </h1>
+                <div class="price-quality__product">
+                    <span>29.000đ</span>
+                    <div class="buttons_added">
+                        <input class="minus is-form" type="button" value="-">
+                        <input aria-label="quantity" class="input-qty" max="10" min="1" name="" type="number" value="1">
+                        <input class="plus is-form" type="button" value="+">
+                    </div>
+                </div>
+            </div>
+            <div class="select-size">
+                <div class="card-product__option">
+                    <span>CHỌN SIZE(BẮT BUỘC)</span>
+                </div>
+                <div class="card-product__option-item">
+                    <div class="control-size__option_item">
+                        <input type="radio" name="nho" id="small">
+                        <label for="small">Nhỏ</label>
+                    </div>
+                    <div class="control-size__option_item">
+                        <input type="radio" name="nho" id="normal">
+                        <label for="normal">Trung bình</label>
+                    </div>
+                    <div class="control-size__option_item">
+                        <input type="radio" name="nho" id="big">
+                        <label for="big">Lớn</label>
+                    </div>
+                </div>
+            </div>
+            <Button class="btn-addItem__product">Thêm vào giỏ hàng</Button>
+        </div>
+    </div> -->
+</section>
+<div class="modal modal-loginJS">
+    <div class="popup-login">
+        <div class="banner-Login">
+            <img src="./images/website/bannerLogin.jpg" alt="">
+        </div>
+        <div class="form">
+            <div class="heading-form-Login">
+                <div class="close-btn">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+                <h2>Login</h2>
+            </div>
+            <div class="form-element">
+                <input type="text" name="email" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-element">
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Remember</label>
+            </div>
+            <div class="form-element">
+                <button class="button-login" type="submit">Sign in</button>
+            </div>
+            <div class="form-element">
+                <a href="#">Forgot password</a>
+            </div>
+        </div>
+    </div>
+</div>
+<section>
+    <div class="item-product__page">
+        
+    </div>
+</section>
+
+
+<body>
+    <!-- <script src="./js/index.js"></script> -->
+    <!-- <script src="./js/event.js"></script> -->
+    <script>//<![CDATA[
+        
+        //]]></script>
+        <script src="./js/general.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
+    <script src="./js/productDetail.js"></script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
